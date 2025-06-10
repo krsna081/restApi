@@ -29,7 +29,7 @@ function convertCRC16(str) {
 }
 
 function generateTransactionId() {
-    return `krsna081-${crypto.randomBytes(2).toString('hex').toUpperCase()}`
+    return `krizz-${crypto.randomBytes(2).toString('hex').toUpperCase()}`
 }
 
 function generateExpirationTime() {
@@ -53,7 +53,7 @@ let { directLink } = await service.uploadFromBinary(buffer, 'jarroffc.png');
 
 async function generateQRIS(amount) {
     try {
-        let qrisData = "00020101021126670016COM.NOBUBANK.WWW01189360050300000879140214455040737299070303UMI51440014ID.CO.QRIS.WWW0215ID20253789260390303UMI5204541153033605802ID5919RIZZ%20SHOP%20OK22879256008BENGKULU61053811362070703A01630416ED";
+        let qrisData = "yeping";
 
         qrisData = qrisData.slice(0, -4);
         const step1 = qrisData.replace("010211", "010212");
@@ -103,7 +103,7 @@ async function createQRIS(amount, codeqr) {
             idtransaksi: generateTransactionId(),
             jumlah: amount,
             expired: generateExpirationTime(),
-            imageqris: { 
+            imageqris: {
             url: uploadedFile
             }
         };
@@ -115,7 +115,7 @@ async function createQRIS(amount, codeqr) {
 
 async function checkQRISStatus() {
     try {
-        const apiUrl = `https://gateway.okeconnect.com/api/mutasi/qris/721989317399598452287925OKCT565EA74D9D9D0E65DE0996C9673A9E14`;
+        const apiUrl = `https://gateway.okeconnect.com/api/mutasi/qris/yaping`;
         const response = await axios.get(apiUrl);
         const result = response.data;
         const data = result.data;
