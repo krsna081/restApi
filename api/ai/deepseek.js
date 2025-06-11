@@ -42,7 +42,7 @@ module.exports = (app) => {
       return res.json({ status: false, error: "Text is required" })
     }
 
-    if (!apikey || (!global.apikey.includes(apikey) && !global.premium_apikey.includes(apikey))) {
+    if (!apikey || (!global.apikeyf.includes(apikey) && !global.apikeyp.includes(apikey))) {
       return res.json({ status: false, error: "Invalid or missing API key" })
     }
 

@@ -33,8 +33,8 @@ try {
   process.exit(1)
 }
 
-global.apikey = settings.apikey || []
-global.premium_apikey = settings.premium_apikey || []
+global.apikeyf = settings.apikeyf || []
+global.apikeyp = settings.apikeyp || []
 global.totalreq = 0
 
 // Middleware untuk log dan format JSON response

@@ -1085,14 +1085,21 @@ body.dark-theme .play-button:hover {
     }
   }
 .premium-badge {
-  background: linear-gradient(45deg, #ff6b6b, #feca57);
-  color: white;
+  background: linear-gradient(45deg, #ffd700, #ffcc00);
+  color: #000;
   padding: 0.2rem 0.5rem;
   border-radius: 12px;
   font-size: 0.65rem;
   font-weight: 700;
   margin-left: 0.5rem;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.premium-badge i {
+  font-size: 0.7rem;
 }
   </style>
 </head>
@@ -1370,7 +1377,7 @@ function renderSearchResults(results) {
           else statusClass = "";
 
           // Premium badge
-          const premiumBadge = api.premium ? '<span class="premium-badge">PREMIUM</span>' : '';
+          const premiumBadge = api.premium ? '<span class="premium-badge"><i class="fas fa-crown"></i> VIP</span>' : '';
 
           card.innerHTML = `
             <div class="api-info">
